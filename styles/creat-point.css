@@ -1,0 +1,148 @@
+#page-creat-point {
+    width: 100%;
+    max-width: 1100px;
+  
+    /* alinhamento de caixa ( pelo lado de fora ) */
+    margin: 0 auto;
+  }
+
+#page-creat-point header {
+    margin-top: 48px;
+  
+    display: flex;
+    /*Joga pro outro lado e da um espaço grande no meio */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #page-creat-point header a {
+    color: var(--title-color);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+  }
+
+  #page-creat-point header a span {
+    margin-right: 16px;
+    background-image: url('../assets/arrow-left.svg');
+
+    display: flex;
+
+    width: 20px;
+    height: 24px;
+  }
+
+  form {
+    background-color: white;
+
+    margin: 80px auto;
+    /* margin-top: 80px;  -- >>   O de cima sobrescreve  */
+    /* Preenchimento pode ser em cima baixo ou lados sem nada ele faz todos */
+    padding: 64px;
+
+    border-radius: 16px;
+
+    max-width: 730px; 
+  }
+
+  form h1 {
+    font-size: 36px;
+  }
+
+  form fieldset {
+    margin-top: 64px;
+
+    border: 0;
+  }
+
+  form legend {
+    margin-bottom: 40px;
+  }
+
+  form legend h2 {
+    font-size: 24px;
+  }
+
+  form .field {
+    flex: 1;     /* Estiga  */
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 24px;
+  }
+
+  form .field-group {
+    display: flex;
+  }
+  
+  form input,
+  form select {
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 18px;
+
+    border-radius: 8px;
+
+    /* Tira a margem preta do navegador quando seleciona */
+    outline: none;
+  }
+
+  form select {
+    /* os navegadores geram um problema na hora de selecionar os campos quando ta 
+    com div options
+    então para resolver resetamos
+
+    webkit = chrome
+    moz = mozima
+    todos
+     */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  form label {
+    font-size: 14px;
+
+    margin-bottom: 8px;
+  }
+
+  /* Essa forma e para separar os campos 
+  esse primeiro referencia o primeiro campo o sinal de + referencia o segundo
+  isso e para colocar estilização entre eles "separar"
+  nesse caso as propriedades estão sendo aplicadas ao segundo depois do +
+   */
+  form .field-group .field + .field {
+    margin-left: 24px;
+  }
+
+  form button {
+    width: 250px;
+    height: 56px;
+
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    border: 0;
+    
+    margin-top: 40px;
+
+    /* transição do hover 
+    estudar essa propriedade porque são muitas*/
+    transition: 400ms;
+
+  }
+
+  /* hover e quando passar o mouse em cima */
+  form button:hover{
+    background-color: #2fb86e;
+
+
+  }
