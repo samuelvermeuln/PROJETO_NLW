@@ -3,3 +3,5 @@ https://www.youtube.com/watch?v=peGUkhXD3Vw&ab_channel=ProfessorWell
 
 upload das minhas configuraçoes do VS code
 https://danielobara.wordpress.com/2018/12/14/como-sincronizar-configuracoes-e-extensoes-do-vs-code-usando-o-settings-sync/#:~:text=Primeiramente%20abra%20o%20Visual%20Studio,que%20o%20Sync%20Settings%20sincroniza%3F&text=Ap%C3%B3s%20instalado%2C%20ser%C3%A1%20necess%C3%A1rio%20configurar,passos%20mostrados%20nas%20figuras%20abaixo.
+token de acesso
+cd60a8f271bcd300c09dce45d5710ed594c9f4ff
