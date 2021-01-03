@@ -20,6 +20,7 @@ populateUFs()
 function getCities(event) {
     const citySelect = document.querySelector("select[name=city]")
     const stateInput = document.querySelector("[name=state]")
+    
 
     const ufValue = event.target.value    
 
@@ -28,14 +29,17 @@ function getCities(event) {
 
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`    
 
-    while (citySelect.firstChild) {
-        citySelect.removeChild(citySelect.firstChild)
-      }
+    // essa parte do codigo comentada serve para limpar o selector toda vez que o estado UF mudar
+    // while (citySelect.firstChild) {
+    //     citySelect.removeChild(citySelect.firstChild)        
+    //   }
+    // essa parte abaixo faz a mesma coisa e porém deixa "Selecione a Cidade" aparecendo 
+    citySelect.innerHTML  = `<option value="">Selecione a Cidade</option>`
 
 
     //      target -> ele ta pegando o valor de "select[name=uf]"
     //          o value e o state.id
-    // console.log(event.target.value)
+    //console.log(event.target.value)
 
     fetch(url)
         .then(res => res.json())
