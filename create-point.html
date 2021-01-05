@@ -40,7 +40,7 @@
                         <!--         .field ja cria a div                                    -->
                         <div class="field">
                             <label for="name">Nome da entidade</label>
-                            <input type="text" name="name">
+                            <input type="text" name="name" required>
                         </div>
 
                         <div class="field-group">
@@ -48,11 +48,11 @@
                                 <div class="field">
                                     <!-- (sem o .)  label + input  -->
                                         <label for="address">Endereço</label>
-                                        <input type="text" name="address">                                    
+                                        <input type="text" name="address" required>                                    
                                 </div>
                                 <div class="field">
                                     <label for="address2">Número/Complemento</label>
-                                    <input type="text" name="address2">
+                                    <input type="text" name="address2" required>
                                 </div>
                         </div>
 
@@ -60,7 +60,7 @@
                         <div class="field-group">
                             <div class="field">
                                 <label for="state">Estado</label>
-                                <select name="uf" required>
+                                <select name="uf" required >
                                     <option value="">Selecione o Estado</option>    
                                 </select>
                             </div>
@@ -69,11 +69,11 @@
                                                                                     <!-- (sem o .)  label + input  -->
                                         
                                         <label for="city">Cidade</label>                                        
-                                        <select name="city"     disabled> <!-- deixa o campo desabilitado ate selecionar o estado primeiro -->
+                                        <select name="city"     disabled required> <!-- deixa o campo desabilitado ate selecionar o estado primeiro -->
                                             <option value="">Selecione a Cidade</option>
                                     </select>
 
-                                    <input type="hidden" name="state">
+                                    <input type="hidden" name="state" required>
                                 </div>                                
                         </div>
 
@@ -85,7 +85,41 @@
                             <h2>Ítens de coleta</h2>
                         </legend>
 
-                        
+                        <div class="items-grid">
+                            <!-- forma de criar              li>img+span                -->
+                            <li data-id="1" class="">
+                                <img src="/assets/lampadas.svg" alt="Lâmpadas">
+                                <span>Lâmpadas</span>
+                            </li>
+
+                            <li data-id="2">
+                                <img src="/assets/baterias.svg" alt="Baterias">
+                                <span>Baterias</span>
+                            </li>
+
+                            <li data-id="3">
+                                <img src="/assets/papeis-papelao.svg" alt="Papelao">
+                                <span>Papelao</span>
+                            </li>
+
+                            <li data-id="4">
+                                <img src="/assets/eletronicos.svg" alt="eletronicos">
+                                <span>eletronicos</span>
+                            </li>
+
+                            <li data-id="5">
+                                <img src="/assets/organicos.svg" alt="organicos">
+                                <span>organicos</span>
+                            </li>
+
+                            <li data-id="6">
+                                <img src="/assets/oleo.svg" alt="oleo">
+                                <span>oleo</span>
+                            </li>
+
+                        </div>
+
+                         <input type="hidden" name="items">                        
                 </fieldset>
 
                                     <!-- esse submit e para quando clicar - enviar o formulario -->
